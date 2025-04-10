@@ -6,6 +6,22 @@
   "engines": {
     "vscode": "^1.99.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palash-sarate/fix-all-VScode-extension.git"
+  },
+  "publisher": "palash-sarate",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "licenseFile": "LICENSE",
+  "readme": "README.md",
+  "keywords": [
+    "vscode",
+    "extension",
+    "fix",
+    "all",
+    "problems"
+  ],
   "categories": [
     "Other"
   ],
