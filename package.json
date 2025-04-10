@@ -1,6 +1,6 @@
 {
   "name": "fix-all",
-  "displayName": "Fix_all",
+  "displayName": "Fix all",
   "description": "Fix all similar problems in one go.",
   "version": "0.0.1",
   "engines": {
@@ -9,13 +9,21 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "fix-all.helloWorld",
-        "title": "Hello World"
+        "command": "fixall.fixSimilarProblems",
+        "title": "Fix all similar problems",
+        "category": "Fix all"
+      },
+      {
+        "command": "fixall.fixSimilarProblemsOneByOne",
+        "title": "Fix all problems One by One",
+        "category": "Fix all"
       }
     ]
   },
