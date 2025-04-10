@@ -109,7 +109,7 @@ export function activate(context: vscode.ExtensionContext) {
                 // Present the quick fix options to the user
                 const selectedAction = await vscode.window.showQuickPick(
                     codeActions.map(action => action.title),
-                    { placeHolder: 'Select a Quick Fix to apply' }
+                    { placeHolder: `Select a Fix for: ${diagnostic.message}` }
                 );
 
                 if (selectedAction) {

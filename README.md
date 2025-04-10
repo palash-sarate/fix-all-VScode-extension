@@ -1,71 +1,39 @@
-# fix-all README
+# Fix All Extension
 
-This is the README for your extension "fix-all". After writing up a brief description, we recommend including the following sections.
+The "Fix All" extension for Visual Studio Code provides a convenient way to apply fixes to similar problems in your code. It leverages the VS Code diagnostics and code actions API to streamline the process of resolving issues detected in your code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Fix Similar Problems
+The `fixall.fixSimilarProblems` command allows you to apply a selected fix to all occurrences of a specific problem in the current file. This is particularly useful when you have multiple instances of the same issue and want to resolve them all at once.
 
-For example if there is an image subfolder under your extension project workspace:
+### Fix Similar Problems One by One
+The `fixall.fixSimilarProblemsOneByOne` command lets you address each problem individually. For each issue, the extension highlights the problem in the editor and presents you with a list of available fixes. You can then choose the appropriate fix for each occurrence.
 
-\!\[feature X\]\(images/feature-x.png\)
+## How to Use
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Open a file with diagnostics (e.g., warnings or errors).
+2. Use the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS) and search for one of the following commands:
+   - **Fix Similar Problems**: Apply a fix to all similar problems in the file.
+   - **Fix Similar Problems One by One**: Address each problem individually.
+3. Follow the prompts to select and apply the desired fixes.
 
-## Requirements
+## Commands
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- `fixall.fixSimilarProblems`: Applies a selected fix to all similar problems in the current file.
+- `fixall.fixSimilarProblemsOneByOne`: Guides you through fixing each problem one by one.
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Clone this repository.
+2. Open the folder in Visual Studio Code.
+3. Run the `npm install` command to install dependencies.
+4. Press `F5` to launch an Extension Development Host with the extension loaded.
 
-For example:
+## Contributing
 
-This extension contributes the following settings:
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the extension.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## License
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the MIT License.
