@@ -97,6 +97,11 @@ export function activate(context: vscode.ExtensionContext) {
 		const diagnostics = vscode.languages.getDiagnostics(document.uri);
 		// Process each diagnostic
         for (const diagnostic of diagnostics) {
+			// Reveal the diagnostic in the editor
+			const range = diagnostic.range;
+			editor.selection = new vscode.Selection(range.start, range.end);
+			editor.revealRange(range, vscode.TextEditorRevealType.InCenter);
+		
             // Get code actions for the diagnostic
             const codeActions = await vscode.commands.executeCommand<vscode.CodeAction[]>('vscode.executeCodeActionProvider', document.uri, diagnostic.range);
 
